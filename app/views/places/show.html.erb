@@ -87,7 +87,8 @@ function initMap() {
   <% end %>
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-  <%= simple_form_for @photo, url: '#' do |p| %>
+  <%= simple_form_for @photo, url: place_photos_path do |p| %>
+  <%= p.input :picture %>
   <%= p.input :caption %>
   <%= p.submit "Upload", class: 'btn btn-primary' %>
   <% end %>
